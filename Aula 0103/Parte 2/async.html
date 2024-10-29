@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    .main {
+      background-color: wheat;
+      width: 100vw;
+      height: 100%;
+      padding: 40px;
+    }
+    .main .more {
+      background-color: #333;
+      border: none;
+      font-weight: 600;
+      color: wheat;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      padding: 5px 15px;
+      font-size: 18px;
+      border-radius: 10px;
+      cursor: pointer;
+      display: block;
+      margin: 20px auto 0;
+    }
+    .main .more.hide {
+      display: none;
+    }
+    .menu {
+      width: 100%;
+      background-color: burlywood;
+      border-radius: 10px;
+      padding: 10px 35px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 50px;
+    }
+    .menu h3 {
+      color: #333;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .menu button {
+      background-color: #333;
+      border: none;
+      font-weight: 600;
+      color: wheat;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      padding: 5px 15px;
+      font-size: 18px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    .gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .gallery .image-box {
+      padding: 5px;
+      background-color: #333;
+    }
+  </style>
+</head>
+<body>
+  <main class="main">
+    <div class="menu">
+      <h3>Galeria de gatinhos</h3>
+      <button type="button" onclick="getDucks()">Carregar</button>
+    </div>
+    <div class="gallery"></div>
+    <button class="more hide" type="button" onclick="getDucks()">Mais</button>
+  </main>
+  <script src="async.js"></script>
+</body>
+</html>
