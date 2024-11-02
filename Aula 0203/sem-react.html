@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sem React</title>
+</head>
+<body>
+  <button id="comprar">Comprar</button>
+  <p id="qtde">Qtde: </p>
+  <p id="valor">Valor: </p>
+  <script>
+    const comprar = document.getElementById('comprar');
+    const qtde = document.getElementById('qtde');
+    const valor = document.getElementById('valor');
+    let cont = 0;
+    comprar.addEventListener('click', () => {
+      console.log("Comprou!");
+      cont++;
+      qtde.innerHTML = 'Qtde: ' + cont;
+      valor.innerHTML = 'Valor: ' + cont * 150;
+    });
+  </script>
+</body>
+</html>
