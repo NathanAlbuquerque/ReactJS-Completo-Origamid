@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Básico</title>
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <!-- Don't use this in production: -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="text/babel">
+
+    // function App() { // esta função em babel
+    //   return <div id="container">Meu App</div>;
+    // }
+    // function App() { // é transformada nesta função em ReactJS
+    //   return React.createElement('div', { id: 'container' }, 'Meu App');
+    // }
+
+    // Esta é uma função componente (Function Component)
+    // São usados para compor interfaces
+    const App = () => {
+      return <Produtos />;
+    }
+
+    // Utilizamos as {} para executar expressões de JavaScript e mostrar o resultado no DOM.
+    // Posso atribuir eventos diretamente aos elementos
+    const Produtos = () => {
+      const produto1 = 'Catanhede';
+      const produto2 = 'Ferracini';
+      function handleClick(event) {
+        console.log('Comprou ' + event.target.innerText);
+      }
+      return <div>
+          <button onClick={handleClick}>Comprar {produto1} - {Math.random() * 100}</button>
+          <button onClick={handleClick}>Comprar {produto2} - {Math.random() * 100}</button>
+        </div>;
+    }
+
+    const container = document.getElementById('root');
+    const root = ReactDOM.createRoot(container);
+    root.render(<App />);
+  </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estado</title>
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <!-- Don't use this in production: -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="text/babel">
+    
+    const App = () => {
+      return <div><Comprar /></div>;
+    }
+    
+    // React facilita a sincronização de estado.
+    // Hooks são funções especiais do React justamente para isto.
+    // O useState é uma delas, que possibilita a  sincronização de estado.
+    const Comprar = () => {
+      const [count, setCount] = React.useState(0);
+      return (
+        <div>
+          <button onClick={() => setCount(count + 1)}>Comprar</button>
+          <p>Comprou: {count}</p>
+          <p>Total: {count * 150}</p>
+        </div>
+      );
+    };
+
+    const container = document.getElementById('root');
+    const root = ReactDOM.createRoot(container);
+    root.render(<App />);
+  </script>
+</body>
+</html>
