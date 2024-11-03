@@ -1,0 +1,6 @@
+ - Passo 1: npm init -y 'Inicia um projeto npm'
+ - Passo 2: npm i esbuild 'Instala o EsBuild'
+ - Passo 3: colar os scripts no packege.json 'Scripts responsáveis para faciliar os comandos de build'
+ - Passo 4: npm i react react-dom 'Instala o React e o ReactDOM'
+ - Passo 5: cria o aquivo index.html e importa o arquivo main.js 'Este arquivo JS será gerado pelo Esbuild'
+ - Passo 6: cria o arquivo main.jsx dentro de /src, este arquivo conterá as importações od React assim como a montagem do Root
